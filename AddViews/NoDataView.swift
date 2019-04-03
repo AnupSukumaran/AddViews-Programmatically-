@@ -38,11 +38,10 @@ class NoDataView: NSObject {
             
             let lableVerticalConstraint = NSLayoutConstraint(item: noDataLB, attribute: .bottom, relatedBy: .equal, toItem: imageView, attribute: .bottom, multiplier: 1, constant: 20)
             
-//            let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 50)
-//            let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 50)
             noDataView.addConstraints([labelhorizontalConstraint, lableVerticalConstraint])
             
-            main.addSubview(noDataView)
+            main.insertSubview(noDataView, at: 0) // to add to lowest part of hierarchy
+           // main.addSubview(noDataView)
         }
         
     }
